@@ -1,0 +1,8 @@
+<% provide(:title, 'Donate Us') %>
+
+<h1>Donate Us</h1>
+<p>
+    <b>Please create an account to donate your money: </b>
+	<% redirect_uri = url_for(:controller => 'users', :action => 'oauth', :user_id => @user.id, :host => request.host_with_port) %>
+    <a class="btn btn-primary" href="<%= @user.wepay_authorization_url(redirect_uri) %>">Click here to create your account </a>
+  </p>

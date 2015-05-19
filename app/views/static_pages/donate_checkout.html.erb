@@ -1,0 +1,36 @@
+<% provide(:title, 'Donate Checkout') %>
+
+<h1>Thank You</h1>
+        <div id="left">
+	    <h3>Donate as User</h3>
+	    <p>Already a user? Sign in to proceed to donate</p>
+        <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :password %>
+        <%= f.passoword_field :password, class: 'form-control' %>
+
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <% end %>
+        <p>New user? <%=link_to "Sign up now!",signup_path %> </p>
+        
+
+        </div>
+
+    <div id="mid">
+	</div>
+
+<div id="right">
+<h3>Donate as Guest</h3>
+	    <p>Don't want to be a user but still want to donate?</p>
+        <p>
+    <b>Please create an account to manage your money: </b>
+	<% redirect_uri = url_for(:controller => 'farmers', :action => 'oauth', :farmer_id => @farmer.id, :host => request.host_with_port) %>
+    <a class="btn btn-primary" href="<%= @farmer.wepay_authorization_url(redirect_uri) %>">Click here to create your account and donate</a>
+  </p>
+       
+
+
+
+</div>

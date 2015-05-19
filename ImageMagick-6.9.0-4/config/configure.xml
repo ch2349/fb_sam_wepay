@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="CC" value="gcc"/>
+  <configure name="CFLAGS" value="-I/usr/local/Cellar/freetype/2.5.5/include/freetype2 -g -O2 -Wall -march=core2 -fexceptions -D_FORTIFY_SOURCE=0 -D_THREAD_SAFE -pthread -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/usr/local/lib/ImageMagick-6.9.0/modules-Q16/coders"/>
+  <configure name="CONFIGURE_PATH" value="/usr/local/etc/ImageMagick-6/"/>
+  <configure name="CONFIGURE" value="./configure  '--with-bzlib=yes' '--with-fontconfig=yes' '--with-freetype=yes' '--with-gslib=yes' '--with-gvc=yes' '--with-jpeg=yes' '--with-jp2=yes' '--with-png=yes' '--with-tiff=yes' '--with-jpg=yes' '--disable-shared'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2015 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/usr/local/include/ImageMagick-6"/>
+  <configure name="CXXFLAGS" value="-g -O2 -D_THREAD_SAFE -pthread"/>
+  <configure name="CXX" value="g++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="bzlib mpeg freetype jng jpeg lzma png zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="--disable-deprecated --with-quantum-depth=16 --with-jemalloc=no --with-umem=no --with-autotrace=no --with-fontpath= --with-rsvg=no --with-wmf=no --with-perl=no"/>
+  <configure name="DOCUMENTATION_PATH" value="/usr/local/share/doc/ImageMagick-6"/>
+  <configure name="EXEC-PREFIX" value="/usr/local"/>
+  <configure name="EXECUTABLE_PATH" value="/usr/local/bin"/>
+  <configure name="FEATURES" value="DPC"/>
+  <configure name="FILTER_PATH" value="/usr/local/lib/ImageMagick-6.9.0/modules-Q16/filters"/>
+  <configure name="HOST" value="x86_64-apple-darwin13.4.0"/>
+  <configure name="INCLUDE_PATH" value="/usr/local/include/ImageMagick-6"/>
+  <configure name="LDFLAGS" value="-L/usr/local/lib "/>
+  <configure name="LIBRARY_PATH" value="/usr/local/lib/ImageMagick-6.9.0"/>
+  <configure name="LIBS" value="-L/usr/local/Cellar/freetype/2.5.5/lib -lfreetype -ljpeg -lpng16 -L/usr/local/Cellar/xz/5.2.0/lib -llzma -lbz2 -lz -lm"/>
+  <configure name="LIB_VERSION_NUMBER" value="6,9,0,4"/>
+  <configure name="LIB_VERSION" value="0x690"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/usr/local"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2015-02-05"/>
+  <configure name="SHAREARCH_PATH" value="/usr/local/lib/ImageMagick-6.9.0/config-Q16"/>
+  <configure name="SHARE_PATH" value="/usr/local/share/ImageMagick-6"/>
+  <configure name="SVN_REVISION" value="17698" />
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="darwin13.4.0"/>
+  <configure name="TARGET_VENDOR" value="apple"/>
+  <configure name="VERSION" value="6.9.0"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+</configuremap>

@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4'
+top_builddir='/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4'
+
+set -a
+COMPARE="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/compare"
+COMPOSITE="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/composite"
+CONJURE="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/conjure"
+CONVERT="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/convert"
+DISPLAY="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/display"
+IDENTIFY="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/identify"
+MONTAGE="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities/montage" 
+VALIDATE="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/tests/validate"
+DRAWTEST="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/tests/drawtest"
+WANDTEST="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/tests/wandtest"
+LD_LIBRARY_PATH="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/coders"
+MAGICK_CONFIGURE_PATH="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/config:/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/config"
+MAGICK_FILTER_MODULE_PATH="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/filters"
+PATH="/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/utilities:/Users/chen-chouhsieh/rails_projects/sample_app/ImageMagick-6.9.0-4/tests:${PATH}"
+set +a
