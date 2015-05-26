@@ -32,7 +32,7 @@ default: &default
 
 development:
   <<: *default
-  database: user_wepay
+  database: user_wepay_fb
 
 
 

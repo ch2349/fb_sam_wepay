@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'wepay'
-gem 'omniauth-facebook'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.rc2'
 # Use sqlite3 as the database for Active Record
@@ -16,6 +16,12 @@ gem 'fog', '1.23.0'
 
 gem 'will_paginate','3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
+
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+
 
 
 group :development, :test do 

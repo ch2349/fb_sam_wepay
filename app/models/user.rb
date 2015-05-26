@@ -7,9 +7,6 @@ class User < ActiveRecord::Base
                                   foreign_key: "followed_id",
                                   dependent: :destroy
 
-
-
-
   has_many :following, through: :active_relationships, source: :followed
 
   has_many :followers, through: :passive_relationships, source: :follower
@@ -27,6 +24,9 @@ class User < ActiveRecord::Base
   
   has_secure_password
   validates :password, length: { minimum: 6 }, allow_blank: true
+
+  has_many :authorizations
+
   
 #Returns the hash digest of the given string.
   def User.digest(string)
@@ -226,47 +226,6 @@ app_fee=0
 
   return response
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

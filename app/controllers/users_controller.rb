@@ -3,8 +3,7 @@ before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :followi
 before_action :correct_user, only:[:edit, :update,:donate,:give]
 before_action :admin_user,    only: :destroy
   
-  def fb
-  end
+  
 
 
   def index
@@ -47,7 +46,7 @@ before_action :admin_user,    only: :destroy
   	if @user.save
      @user.send_activation_email
       log_in(@user) 
-      @micropost=@user.microposts.create!(content: "hello world")
+      #@micropost=@user.microposts.create!(content: "hello world")
             flash[:info]="Please check your email to activate your account."
       
       

@@ -257,6 +257,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick (= 3.8.0)
   mysql2
+  omniauth
   omniauth-facebook
   pg (= 0.17.1)
   puma (= 2.11.1)

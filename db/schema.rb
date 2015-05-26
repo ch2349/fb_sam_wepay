@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519051113) do
+ActiveRecord::Schema.define(version: 20150525055827) do
+
+  create_table "authorizations", force: true do |t|
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id", using: :btree
 
   create_table "microposts", force: true do |t|
     t.text     "content",    limit: 65535
@@ -53,6 +63,8 @@ ActiveRecord::Schema.define(version: 20150519051113) do
     t.integer  "wepay_account_id",   limit: 4
     t.string   "provider",           limit: 255
     t.string   "uid",                limit: 255
+    t.string   "oauth_token",        limit: 255
+    t.datetime "oauth_expires_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
