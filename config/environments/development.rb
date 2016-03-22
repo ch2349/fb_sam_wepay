@@ -32,8 +32,8 @@ Rails.application.configure do
   config.assets.debug = true
 
 
-  CLIENT_ID=21982   
-  CLIENT_SECRET='7d8cd28523'
+  CLIENT_ID = ENV['WEPAY_ID']
+  CLIENT_SECRET = ENV['WEPAY_CLIENT_SECRET']
   USE_STAGE= true
   WEPAY=WePay::Client.new(CLIENT_ID, CLIENT_SECRET,USE_STAGE)
   

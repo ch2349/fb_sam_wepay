@@ -44,9 +44,10 @@ Rails.application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-
-  CLIENT_ID=21982   
-  CLIENT_SECRET='7d8cd28523'
+  
+  
+  CLIENT_ID = ENV['WEPAY_ID']
+  CLIENT_SECRET = ENV['WEPAY_CLIENT_SECRET']
   USE_STAGE= false
   WEPAY=WePay::Client.new(CLIENT_ID, CLIENT_SECRET,USE_STAGE)
   
