@@ -90,7 +90,7 @@ before_action :admin_user,    only: :destroy
     render 'show_follow'
   end
 
-  def Followers
+  def followers
     @title= "Followers"
     @user =User.find(params[:id])
     @users= @user.followers.paginate(page: params[:page])
@@ -115,7 +115,8 @@ def oauth
   if error
     redirect_to @user, alert: error
   else
-    redirect_to @user, notice: 'We successfully connected you to WePay!'
+    redirect_to "/users/#{@user.id}/donate", notice: 'We successfully connected you to WePay!'
+    #redirect_to @user, notice: 'We successfully connected you to WePay!'
   end
 end
 
