@@ -45,11 +45,11 @@ Rails.application.configure do
   config.log_level = :info
 
 
-  CLIENT_ID=186197   
-  CLIENT_SECRET="6d01401caf"
+  CLIENT_ID=21982   
+  CLIENT_SECRET='7d8cd28523'
   USE_STAGE= false
   WEPAY=WePay::Client.new(CLIENT_ID, CLIENT_SECRET,USE_STAGE)
-
+  
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
-
+gem 'certified'
 gem 'wepay'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

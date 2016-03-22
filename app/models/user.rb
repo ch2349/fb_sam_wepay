@@ -204,20 +204,25 @@ end
 # creates a checkout object using WePay API for this farmer
 def create_checkout(redirect_uri)
   # calculate app_fee as 10% of produce price
-  #app_fee = self.produce_price * 0.1
-app_fee=0
+  app_fee = self.donate_amount * 0.1
   params = {
     :account_id => self.wepay_account_id,
     :short_description => "Donate from #{self.name}",
-    :type => :GOODS,
+    :type => 'donation',
+    :currency => 'USD',
     :amount => self.donate_amount,      
-    :app_fee => app_fee,
-    :fee_payer => :payee,     
-    :mode => :iframe,
-    :redirect_uri => redirect_uri
+    :fee => { 
+              :app_fee => app_fee,
+              :fee_payer => 'payee'
+            },
+    :hosted_checkout => {
+                          :mode => 'iframe',
+                          :redirect_uri => redirect_uri
+                        }     
+    
   }
   response = WEPAY.call('/checkout/create', self.wepay_access_token, params)
-
+  puts response
   if !response
     raise "Error - no response from WePay"
   elsif response['error']

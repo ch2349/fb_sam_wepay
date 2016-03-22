@@ -36,7 +36,7 @@ Rails.application.configure do
   CLIENT_SECRET='7d8cd28523'
   USE_STAGE= true
   WEPAY=WePay::Client.new(CLIENT_ID, CLIENT_SECRET,USE_STAGE)
-
+  
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.

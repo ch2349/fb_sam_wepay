@@ -1,11 +1,11 @@
-<h1>Donate <%= number_to_currency(@user.donate_amount, :unit => "$") %> from <%= @user.name %> for </h1>
-<p><%= link_to "← back to " + @user.name + "'s " + @user.name, @user %></p>
+<h1>Donate <%= number_to_currency(@user.donate_amount, :unit => "$") %> from <%= @user.name %> </h1>
+<p><%= link_to "← back to " + @user.name + "'s " + 'profile', @user %></p>
 
-<div id="wepay-iframe-div">
-	<script type="text/javascript" src="https://www.wepay.com/js/iframe.wepay.js">
+<div id="checkout_div">
+	<script type="text/javascript" src="https://stage.wepay.com/js/iframe.wepay.js"> 
 	</script>
 
 	<script type="text/javascript">
-		WePay.iframe_checkout("wepay-iframe-div", "<%= @checkout['checkout_uri'] %>");
+		WePay.iframe_checkout("checkout_div", "<%= @checkout['hosted_checkout']['checkout_uri'] %>");
 	</script>
 </div>
