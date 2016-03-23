@@ -48,7 +48,7 @@ Rails.application.configure do
   
   CLIENT_ID = ENV['WEPAY_ID']
   CLIENT_SECRET = ENV['WEPAY_CLIENT_SECRET']
-  USE_STAGE= false
+  USE_STAGE= true
   WEPAY=WePay::Client.new(CLIENT_ID, CLIENT_SECRET,USE_STAGE)
   
   # Prepend all log lines with the following tags.
